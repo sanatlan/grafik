@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleNav()">&times;</a>
+        <div class="logo-container">
+            
+            <img src="logo-open.gif" alt="Açık Logo" class="navbar-logo open-logo">
+        </div>
+        <a href="index.html"><i class="fas fa-home"></i><span> Anasayfa</span></a>
+        <a href="hakkimizda.html"><i class="fas fa-info-circle"></i><span> Hakkımızda</span></a>
+        <div class="dropdown">
+            <a href="uzmanliklar.html" class="dropbtn"><i class="fas fa-box"></i><span> Ürünler</span></a>
+            <div class="dropdown-content">
+                <a href="#"><i class="fas fa-fire"></i> Havai Fişek</a>
+                <a href="#"><i class="fas fa-mountain"></i> Volkan-Şelale</a>
+                <a href="#"><i class="fas fa-star"></i> Konfeti</a>
+                <a href="#"><i class="fas fa-cloud"></i> Sis Makinesi</a>
+                <a href="#"><i class="fas fa-wind"></i> JO2 Jet</a>
+                <a href="#"><i class="fas fa-fire-alt"></i> Alev Makinesi</a>
+                <a href="#"><i class="fas fa-snowflake"></i> Kuru Buz</a>
+                <a href="#"><i class="fas fa-circle"></i> Balon</a>
+            </div>
+        </div>
+        <a href="iletisim.html"><i class="fas fa-envelope"></i><span> İletişim</span></a>
+        <div class="dropdown">
+            <a href="forum.html" class="dropbtn"><i class="fas fa-comments"></i><span> Forum</span></a>
+            <div class="dropdown-content">
+                <a href="forum.html"><i class="fas fa-comment"></i> Forum 1</a>
+                <a href="forum.html"><i class="fas fa-comment"></i> Forum 2</a>
+                <a href="forum.html"><i class="fas fa-comment"></i> Forum 3</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="mobile-menu-btn" onclick="toggleNav()">&#9776;</button>
+
+    <div id="main">
+        <h1>İletişim</h1>
+        <div class="content">
+            <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+            <ul>
+                <li><i class="fas fa-phone"></i> Telefon: +90 555 123 4567</li>
+                <li><i class="fas fa-envelope"></i> E-posta: info@firmamiz.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Adres: İstanbul, Türkiye</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Temel değişkenler
+        const navbar = document.querySelector('.navbar');
+        const main = document.getElementById('main');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeBtn = document.querySelector('.close-btn');
+        let isMobile = window.innerWidth <= 768;
+        let isHovering = false;
+
+        // Mobil menü kontrolü
+        function toggleNav() {
+            if (isMobile) {
+                navbar.classList.toggle('active');
+                document.body.classList.toggle('navbar-active');
+                
+                if (navbar.classList.contains('active')) {
+                    navbar.style.width = '250px';
+                    main.style.marginLeft = '250px';
+                    main.style.width = 'calc(100% - 250px)';
+                } else {
+                    navbar.style.width = '60px';
+                    main.style.marginLeft = '60px';
+                    main.style.width = 'calc(100% - 60px)';
+                }
+            }
+        }
+
+        // Logo animasyonu
+        document.querySelector('.navbar').addEventListener('mouseover', function () {
+            const gifLogo = document.querySelector('.open-logo');
+            if (gifLogo) {
+                const src = gifLogo.src;
+                gifLogo.src = '';
+                gifLogo.src = src;
+            }
+        });
+    </script>
+</body>
+</html>

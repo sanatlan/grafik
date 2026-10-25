@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Kağıt ve baskı seçimi</title>
+  <desc id="desc">Kağıt örnekleri ve baskı renkleriyle hazırlanmış basılı materyal tasarımı.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#eee7d8"/>
+      <stop offset="1" stop-color="#d8c7a8"/>
+    </linearGradient>
+    <linearGradient id="sheet" x2="0" y2="1">
+      <stop stop-color="#fffefb"/>
+      <stop offset="1" stop-color="#f3eee4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#3b3022" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <path d="M0 570 1200 410v350H0z" fill="#cdb98f" opacity=".32"/>
+  <g filter="url(#shadow)" transform="rotate(-7 450 390)">
+    <rect x="190" y="145" width="520" height="450" rx="8" fill="#e7e0d2"/>
+    <rect x="205" y="130" width="520" height="450" rx="8" fill="#faf8f2"/>
+    <rect x="220" y="115" width="520" height="450" rx="8" fill="url(#sheet)"/>
+    <rect x="267" y="167" width="220" height="288" rx="4" fill="#e9eee8"/>
+    <path d="M267 455 355 335l55 65 50-90 27 145z" fill="#819b8d"/>
+    <circle cx="435" cy="234" r="38" fill="#c69b5e"/>
+    <text x="520" y="245" fill="#29352e" font-family="Georgia,serif" font-size="32">BASKI</text>
+    <text x="520" y="284" fill="#758075" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">KAGIT · RENK · DOKU</text>
+    <path d="M520 315h165" stroke="#c4b38e" stroke-width="2"/>
+    <rect x="520" y="341" width="150" height="9" rx="4" fill="#d4d0c5"/>
+    <rect x="520" y="362" width="132" height="9" rx="4" fill="#dedbd2"/>
+    <rect x="520" y="383" width="160" height="9" rx="4" fill="#dedbd2"/>
+    <rect x="520" y="427" width="36" height="36" rx="18" fill="#455a4d"/>
+    <rect x="568" y="427" width="36" height="36" rx="18" fill="#c69b5e"/>
+    <rect x="616" y="427" width="36" height="36" rx="18" fill="#9b6a56"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="755" y="380" width="260" height="178" rx="12" fill="#fffdf8" transform="rotate(8 885 469)"/>
+    <rect x="766" y="366" width="260" height="178" rx="12" fill="#f7f4ed" transform="rotate(3 896 455)"/>
+    <rect x="780" y="350" width="260" height="178" rx="12" fill="#fffdf8"/>
+    <rect x="810" y="382" width="200" height="18" rx="9" fill="#34473b"/>
+    <rect x="810" y="418" width="150" height="10" rx="5" fill="#c6c0b2"/>
+    <rect x="810" y="439" width="170" height="10" rx="5" fill="#d8d2c5"/>
+    <rect x="810" y="475" width="42" height="28" rx="5" fill="#354d40"/>
+    <rect x="861" y="475" width="42" height="28" rx="5" fill="#c49451"/>
+    <rect x="912" y="475" width="42" height="28" rx="5" fill="#a96350"/>
+  </g>
+  <text x="778" y="625" fill="#5a4932" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3">KAĞIT &amp; BASKI</text>
+</svg>

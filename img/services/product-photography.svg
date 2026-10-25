@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" fill="none">
+  <rect width="900" height="560" rx="34" fill="#EAE8E0"/>
+  <circle cx="729" cy="111" r="145" fill="#D7DCCF"/>
+  <circle cx="142" cy="468" r="120" fill="#E8D8C4"/>
+  <rect x="150" y="105" width="600" height="360" rx="28" fill="#FFFCF7"/>
+  <rect x="186" y="166" width="528" height="250" rx="24" fill="#38413B"/>
+  <path d="M267 166 302 124h105l35 42" fill="#38413B"/>
+  <rect x="462" y="137" width="108" height="20" rx="10" fill="#D6C7AE"/>
+  <circle cx="450" cy="291" r="104" fill="#D8C9AE"/>
+  <circle cx="450" cy="291" r="79" fill="#63776A"/>
+  <circle cx="450" cy="291" r="57" fill="#25342E"/>
+  <circle cx="450" cy="291" r="36" fill="#9FB2A1"/>
+  <circle cx="430" cy="271" r="13" fill="#E8EFE5"/>
+  <path d="M625 204h38v30h-38z" fill="#C88D62"/>
+  <path d="M200 465h500" stroke="#C3B49C" stroke-width="10" stroke-linecap="round"/>
+  <path d="m115 87 12-26 12 26 26 12-26 12-12 26-12-26-26-12 26-12Z" fill="#B77C51"/>
+  <path d="m762 427 9-20 9 20 20 9-20 9-9 20-9-20-20-9 20-9Z" fill="#7C8B76"/>
+</svg>

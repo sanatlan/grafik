@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bahçelievler Çilingir-Oto Anahtar & Kısmet ürünleri, adres ve telefon bilgileri.">
+    <title>Ürünlerimiz | Bahçelievler Çilingir-Oto Anahtar &amp; Kısmet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="mobile-header">
+        <button class="mobile-toggle-btn" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="siteMenu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        <a class="mobile-logo" href="index.html" aria-label="Bahçelievler Çilingir ana sayfa"><img src="img/logo.svg" alt="Bahçelievler Çilingir ve Oto Anahtar"></a>
+    </header>
+    <aside class="sidebar" id="siteMenu" aria-label="Ana menü">
+        <div class="logo-container"><a href="index.html"><img src="img/logo.svg" alt="Bahçelievler Çilingir ve Oto Anahtar"></a></div>
+        <ul class="nav-menu">
+            <li><a href="index.html" aria-label="Ana Sayfa"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Ana Sayfa</span></a></li>
+            <li><a href="hakkimizda.html" aria-label="Hakkımızda"><i class="fa-solid fa-user-group" aria-hidden="true"></i><span>Hakkımızda</span></a></li>
+            <li><a href="hizmetlerimiz.html" aria-label="Hizmetlerimiz"><i class="fa-solid fa-key" aria-hidden="true"></i><span>Hizmetlerimiz</span></a></li>
+            <li><a href="urunlerimiz.html" class="active" aria-label="Ürünlerimiz"><i class="fa-solid fa-box-open" aria-hidden="true"></i><span>Ürünlerimiz</span></a></li>
+            <li><a href="hizmet-bolgeleri.html" aria-label="Hizmet Bölgeleri"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span>Hizmet Bölgeleri</span></a></li>
+            <li><a href="iletisim.html" aria-label="İletişim"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>İletişim</span></a></li>
+        </ul>
+    </aside>
+    <div class="main-content">
+        <main class="content-body">
+            <section class="page-banner"><h1>Anahtar ve Kilit Ürünleri</h1><p>Bahçelievler Çilingir-Oto Anahtar &amp; Kısmet hakkında ürün ve hizmet bilgisi için arayın.</p></section>
+            <section class="content-box">
+                <h2>Ürün grupları</h2>
+                <div class="responsive-grid">
+                    <article class="service-card"><i class="fa-solid fa-key" aria-hidden="true"></i><h3>Kapı anahtarları</h3><p>Farklı kapı ve kilit tiplerine uygun anahtar seçenekleri.</p></article>
+                    <article class="service-card"><i class="fa-solid fa-lock" aria-hidden="true"></i><h3>Kilit ve bareller</h3><p>Kapınızın ölçü ve kilit tipine uygun ürün seçenekleri.</p></article>
+                    <article class="service-card"><i class="fa-solid fa-car" aria-hidden="true"></i><h3>Oto anahtar ve kumandalar</h3><p>Araç marka ve modeline göre değişebilen anahtar ve kumanda seçenekleri.</p></article>
+                </div>
+                <p class="service-note">İşletme adresi: Mustafa Kemal Paşa Cd. No:35, Bahçelievler / İstanbul. Ürün uygunluğu ve bilgi için <a href="tel:+905324356523">0532 435 65 23</a> numarasını arayın.</p>
+            </section>
+        </main>
+        <footer><p>&copy; 2026 Bahçelievler Çilingir-Oto Anahtar &amp; Kısmet. Tüm hakları saklıdır.</p></footer>
+    </div>
+    <a class="contact-fab" href="tel:+905324356523" aria-label="0532 435 65 23 numarasını ara">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+    </a>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('siteMenu');
+        const mobileHeader = document.querySelector('.mobile-header');
+        menuToggle.addEventListener('click', () => {
+            const isOpen = sidebar.classList.toggle('open');
+            mobileHeader.classList.toggle('menu-open', isOpen);
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+            menuToggle.setAttribute('aria-label', isOpen ? 'Menüyü kapat' : 'Menüyü aç');
+            menuToggle.querySelector('i').classList.toggle('fa-bars', !isOpen);
+            menuToggle.querySelector('i').classList.toggle('fa-xmark', isOpen);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Filtre Butonları -->
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tümü</button>
+        <button class="filter-btn" data-filter="havai">Havai Fişek</button>
+        <button class="filter-btn" data-filter="volkan">Volkan-Şelale</button>
+        <button class="filter-btn" data-filter="konfeti">Konfeti</button>
+        <button class="filter-btn" data-filter="sis">Sis Makinesi</button>
+        <button class="filter-btn" data-filter="jet">JO2 Jet</button>
+        <button class="filter-btn" data-filter="alev">Alev Makinesi</button>
+        <button class="filter-btn" data-filter="buz">Kuru Buz</button>
+        <button class="filter-btn" data-filter="balon">Balon-Kar</button>
+    </div>
+
+    <div class="navbar" id="navbar">
+        
+        <div class="logo-container">
+            <img src="logo-closed.png" alt="Kapalı Logo" class="navbar-logo closed-logo">
+            <img src="logo-open.gif" alt="Açık Logo" class="navbar-logo open-logo">
+        </div>
+        <a href="index.html"><i class="fas fa-home"></i><span> Anasayfa</span></a>
+        <a href="hakkimizda.html"><i class="fas fa-info-circle"></i><span> Hakkımızda</span></a>
+        <div class="dropdown">
+            <a href="uzmanliklar.html" class="dropbtn"><i class="fas fa-box"></i><span> Ürünler</span></a>
+            <div class="dropdown-content">
+                <a href="#"><i class="fas fa-fire"></i> Havai Fişek</a>
+                <a href="#"><i class="fas fa-mountain"></i> Volkan-Şelale</a>
+                <a href="#"><i class="fas fa-star"></i> Konfeti</a>
+                <a href="#"><i class="fas fa-cloud"></i> Sis Makinesi</a>
+                <a href="#"><i class="fas fa-wind"></i> JO2 Jet</a>
+                <a href="#"><i class="fas fa-fire-alt"></i> Alev Makinesi</a>
+                <a href="#"><i class="fas fa-snowflake"></i> Kuru Buz</a>
+                <a href="#"><i class="fas fa-circle"></i> Balon</a>
+            </div>
+        </div>
+        <a href="iletisim.html"><i class="fas fa-envelope"></i><span> İletişim</span></a>
+        <div class="dropdown">
+            <a href="forum.html" class="dropbtn"><i class="fas fa-comments"></i><span> Forum</span></a>
+            <div class="dropdown-content">
+                <a href="forum.html"><i class="fas fa-comment"></i> Forum 1</a>
+                <a href="forum.html"><i class="fas fa-comment"></i> Forum 2</a>
+                <a href="forum.html"><i class="fas fa-comment"></i> Forum 3</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="mobile-menu-btn">&#9776;</button>
+
+    <div id="main">
+        <div id="video-gallery" class="video-gallery"></div>
+
+    </div>
+
+    <script>
+
+        // Filtreleme fonksiyonu
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                button.classList.add('active');
+                
+                document.querySelectorAll('.video-item').forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+	<script src="js/scripts.js"></script>
+
+	
+</body>
+</html>
